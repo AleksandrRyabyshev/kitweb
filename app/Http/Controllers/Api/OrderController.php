@@ -58,10 +58,11 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+  public function edit($id)
+  {
+    $order = Order::find($id);
+    return response()->json($order);
+  }
 
     /**
      * Update the specified resource in storage.
