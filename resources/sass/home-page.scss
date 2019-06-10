@@ -14,3 +14,41 @@ div.header {
   color: white;
 }
 
+.list-menu {
+  max-width: 100%;
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; /*space-between*/
+  li {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 5px;
+  }
+}
+
+.order td{
+  background-color: $body-bg;
+}
+
+
+// Page 404
+
+
+.error-template {
+  margin-top: 4rem;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.error-actions {
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
+.error-actions .btn { margin-right:10px; }
+
+
+

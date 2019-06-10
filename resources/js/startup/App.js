@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 // import PropTypes from 'prop-types';
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import Routes from './both/routes';
 import Main from '../ui/layouts/main/Main';
 

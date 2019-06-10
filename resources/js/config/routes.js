@@ -6,6 +6,7 @@ export const ROUTES = {
     HOME: '/',
     RECOVERY: '/recovery',
     LOGIN: '/login',
+    ORDER: '/order/id/:id'
   },
   ADMIN: {
     HOME: '/panel/admin',

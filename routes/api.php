@@ -17,4 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('orders', 'Ordercontroller@index');
+Route::resource('orders', 'Api\OrderController');
+
+//Route::get('order/{product}', function ($productId) {
+//  return response()->json(['productId' => "{$productId}"], 200);
+//});
