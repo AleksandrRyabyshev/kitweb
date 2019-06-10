@@ -6,3 +6,8 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// imports all scss files
+
+@import 'home-page.scss';
+@import 'registration.scss';

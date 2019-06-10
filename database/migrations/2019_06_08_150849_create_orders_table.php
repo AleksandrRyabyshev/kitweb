@@ -14,11 +14,13 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('userid')->unsigned();
+            $table->increments('id_order');
+            $table->string('order_name');
+            $table->integer('user_id')->unsigned();
             $table->integer('service_id');
             $table->integer('numb_seal');
-            $table->integer('box');
+            $table->integer('box_numb');
+            $table->string('locality');
             $table->integer('code');
             $table->integer('degree_wear');
             $table->text('defects')->charset('utf8');
@@ -26,15 +28,15 @@ class CreateOrdersTable extends Migration
             $table->dateTime('date_receipt');
             $table->dateTime('date_issue');
             $table->integer('status');
-            $table->integer('pay_type');
-            $table->integer('pay_status');
+            $table->integer('payment_type');
+            $table->integer('payment_status');
             $table->integer('shipment');
             $table->integer('price');
             $table->timestamps();
         });
 
         Schema::table('orders', function (Blueprint $table) {
-            $table->foreign('userid')
+            $table->foreign('user_id')
               ->references('id')
               ->on('users')
               ->onUpdate('cascade')
@@ -49,9 +51,9 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-//        Schema::table('orders', function (Blueprint $table) {
-//          $table->dropForeign(['user_id']);
-//        });
+        Schema::table('orders', function (Blueprint $table) {
+          $table->dropForeign(['user_id']);
+        });
 
         Schema::dropIfExists('orders');
     }
