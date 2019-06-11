@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import Menu from '../../componets/home/Menu';
-import Order from '../../componets/home/Order';
+import Orders from '../../componets/home/Orders';
 // import { ROUTES } from '../../../config/routes';
 
 class Home extends React.Component {
@@ -39,7 +39,7 @@ class Home extends React.Component {
           <div className="container">
             <h3 className="text-center">Заказы</h3>
 
-            {/* <!-- View Cards--> */}
+            {/* <!-- View Orders--> */}
             <div className="table-responsive">
               <table className="table table-hover">
                 <thead>
@@ -54,13 +54,13 @@ class Home extends React.Component {
                 </thead>
 
                 <tbody>
-                {orders.map((item, index) => (
-                  <Order key={index} order={item}/>
-                ))}
+                  {orders.map((item, index) => (
+                    <Orders key={index} order={item}/>
+                  ))}
                 </tbody>
               </table>
             </div>
-            {/* <!-- //. View Cards--> */}
+            {/* <!-- //. View Orders--> */}
 
           </div>
         </div>

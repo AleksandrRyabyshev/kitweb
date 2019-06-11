@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { ROUTES } from '../../../config/routes';
 
-class Login extends React.Component {
+class SingIn extends React.Component {
   render () {
     return (
       <React.Fragment>
@@ -48,4 +48,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default SingIn;

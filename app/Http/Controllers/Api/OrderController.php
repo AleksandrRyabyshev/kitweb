@@ -15,9 +15,10 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::all();
+      //$orders = Order::all();
+      $orders = Order::orderBy('date_receipt', 'desc')->get();
 
-        return response()->json($orders);
+      return response()->json($orders);
     }
 
     /**
@@ -49,7 +50,9 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+      $order = Order::where('id_order', $id)->get();
+
+      return response()->json($order);
     }
 
     /**
@@ -60,8 +63,8 @@ class OrderController extends Controller
      */
   public function edit($id)
   {
-    $order = Order::find($id);
-    return response()->json($order);
+//    $order = Order::find($id);
+//    return response()->json($order);
   }
 
     /**

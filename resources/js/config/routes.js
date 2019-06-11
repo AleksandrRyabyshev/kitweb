@@ -5,8 +5,9 @@ export const ROUTES = {
   SSR: {
     HOME: '/',
     RECOVERY: '/recovery',
-    LOGIN: '/login',
-    ORDER: '/order/id/:id'
+    LOGIN: '/singin',
+    ORDER: '/order/id/:id',
+    REGISTRATION: '/singup',
   },
   ADMIN: {
     HOME: '/panel/admin',

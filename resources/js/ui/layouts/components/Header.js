@@ -18,7 +18,10 @@ const Header = () => (
       <div className="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" href={ROUTES.SSR.LOGIN}>Login</a>
+            <a className="nav-link" href={ROUTES.SSR.REGISTRATION}>Sing Up</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href={ROUTES.SSR.LOGIN}>Sing In</a>
           </li>
         </ul>
       </div>

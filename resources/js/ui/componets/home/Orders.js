@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-class Order extends React.Component {
+class Orders extends React.Component {
   render () {
     const { order } = this.props;
+
     return (
       <React.Fragment>
         <tr className="order">
@@ -35,4 +36,4 @@ class Order extends React.Component {
   }
 }
 
-export default Order;
+export default Orders;
