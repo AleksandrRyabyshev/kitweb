@@ -22,13 +22,14 @@ class CreateOrdersTable extends Migration
             $table->integer('box_numb');
             $table->string('locality');
             $table->integer('code');
+            $table->string('type_service');
             $table->integer('degree_wear');
             $table->text('defects')->charset('utf8');
             $table->text('warning')->charset('utf8');
             $table->dateTime('date_receipt');
             $table->dateTime('date_issue');
             $table->integer('status');
-            $table->integer('payment_type');
+            $table->string('payment_type');
             $table->integer('payment_status');
             $table->integer('shipment');
             $table->integer('price');

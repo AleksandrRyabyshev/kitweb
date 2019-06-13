@@ -13,6 +13,8 @@ class SingIn extends React.Component {
 
         <div className="login">
           <h2 className="text-center">Вход</h2>
+
+          {/* <!-- Login Form --> */}
           <form>
             <div className="form-group">
               <label htmlFor="login">Логин</label>
@@ -42,6 +44,7 @@ class SingIn extends React.Component {
             </div>
             <button type="submit" className="btn btn-primary float-right">Войти</button>
           </form>
+          {/* <!-- ..// Login Form --> */}
         </div>
       </React.Fragment>
     );

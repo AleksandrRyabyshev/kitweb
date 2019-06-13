@@ -2,6 +2,7 @@ import React from 'react';
 
 const Footer = () => (
   <footer>
+  {/*<footer className="mypage-footer">*/}
     {/* <!-- Copyright --> */}
     <div className="footer-copyright text-center py-3 footer">© 2019 Copyright:
       <a href="#"> Kitweb.com</a>

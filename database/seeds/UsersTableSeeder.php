@@ -12,7 +12,6 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
       DB::table('users')->insert([
-//        'id' => Int::random(10),
         'user_name' => 'alex',
         'auth_key' => Str::random(10),
         'email' => Str::random(10).'ss@gmail.com',
@@ -24,7 +23,7 @@ class UsersTableSeeder extends Seeder
         'last_name' => Str::random(10),
         'middle_name' => Str::random(10),
         'phone' => '+38 099 000 00 00',
-        'birth_date' => '2000-01-01',
+        'birth_date' => date("Y-m-d H:i:s"),
         'logo' => Str::random(10),
         'address' => Str::random(10),
         'house' => 12,

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import Menu from '../../componets/home/Menu';
 import Orders from '../../componets/home/Orders';
-// import { ROUTES } from '../../../config/routes';
+import { ROUTES } from '../../../config/routes';
 
 class Home extends React.Component {
   constructor() {
@@ -61,6 +61,8 @@ class Home extends React.Component {
               </table>
             </div>
             {/* <!-- //. View Orders--> */}
+
+            <a href={ROUTES.SSR.NEW_ORDER} className="btn btn-primary float-right">Создать заказ</a>
 
           </div>
         </div>

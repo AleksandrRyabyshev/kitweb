@@ -1,6 +1,6 @@
 <?php
 
-use App\Order;
+//use App\Order;
 use Illuminate\Http\Request;
 
 /*
@@ -20,12 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('orders', 'Api\OrderController');
 Route::get('order/{id}', 'Api\OrderController@show');
+Route::post('order', 'Api\OrderController@store');
 
+Route::post('user', 'Api\UserController@store');
 
-//Route::get('api/order/{id}', function ($id) {
-//  return Order::findOrFail($id);
-//});
-
-//Route::get('order/{order}', function ($id_order) {
-//  return response()->json(['id_order' => "{$id_order}"], 200);
-//});

@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Order;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use phpDocumentor\Reflection\DocBlock\Tags\Uses;
 
-class OrderController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +16,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-      //$orders = Order::all();
-      $orders = Order::orderBy('date_receipt', 'desc')->get();
-
-      return response()->json($orders);
+        //
     }
 
     /**
@@ -39,33 +37,31 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-      $order = new Order();
+        $user = new User();
 
-      $order->user_id = 1;
+        $user->first_name = $request->get('first_name');
+        $user->last_name = $request->get('last_name');
+        $user->user_name = $request->get('user_name');
+        $user->city = $request->get('city');
+        $user->address = $request->get('address');
+        $user->house = $request->get('house');
+        $user->phone = $request->get('phone');
+        $user->birth_date = $request->get('birth_date');
+        $user->email = $request->get('email');
+        $user->password = $request->get('password');
 
-      $order->order_name = $request->get('order_name');
-      $order->locality = $request->get('locality');
-      $order->box_numb = $request->get('box_numb');
-      $order->numb_seal = $request->get('numb_seal');
-      $order->type_service = $request->get('type_service');
-      $order->payment_type = $request->get('payment_type');
-      $order->price = $request->get('price');
+        // Default values
+        $user->auth_key = 'ssad';
+        $user->password_reset_token = $request->get('password');
+        $user->user_auth_token = 'fdsfds';
+        $user->sms_code = 3435;
+        $user->middle_name = 'Pupkovich';
+        $user->logo = 'logo';
+        $user->role = 'user';
 
-      // Default values
-      $order->service_id = 12;
-      $order->code = 432;
-      $order->degree_wear = 453;
-      $order->defects = 'абс';
-      $order->warning = 'деф';
-      $order->date_receipt = date("Y-m-d H:i:s");
-      $order->date_issue = date("Y-m-d H:i:s");
-      $order->status = 342;
-      $order->payment_status = 65443;
-      $order->shipment = 65873;
+        $user->save();
 
-      $order->save();
-
-      return $order;
+        return $user;
     }
 
     /**
@@ -76,9 +72,7 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-      $order = Order::where('id_order', $id)->get();
-
-      return response()->json($order);
+        //
     }
 
     /**
@@ -87,11 +81,10 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-  public function edit($id)
-  {
-//    $order = Order::find($id);
-//    return response()->json($order);
-  }
+    public function edit($id)
+    {
+        //
+    }
 
     /**
      * Update the specified resource in storage.

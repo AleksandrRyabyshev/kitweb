@@ -12,7 +12,7 @@ const Main = ({ children, ...props }) => (
       </section>
     </div>
 
-    <Footer />
+    {/*<Footer />*/}
   </div>
 );
 
